@@ -5,6 +5,7 @@
   "main": "js/electron.js",
   "scripts": {
     "start": "sh run-start.sh",
+    "start-server": "node serveronly/index.js",
     "install": "cd vendor && yon install",
     "install-fonts": "cd fonts && yon install",
     "postinstall": "sh installers/postinstall/postinstall.sh && yon run install-fonts",
