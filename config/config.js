@@ -35,18 +35,20 @@ var config = {
         },
         {
             module:   "clock",
-            position: "top_left"
+            position: "top_center"
         },
         {
             module:   "calendar",
             header:   "Événements Highco Shopper",
             position: "top_left",
             config:   {
+                wrapEvents: true,
+                maxTitleLength: 20,
                 timeFormat:             'absolute',
-                dateFormat:             'D MMMM',
-                fullDayEventDateFormat: 'D MMMM',
+                dateFormat:             'D MMM',
+                fullDayEventDateFormat: 'D MMM',
                 urgency:                0,
-                fade:                   0,
+                fade:                   0.1,
                 calendars:              [
                     {
                         symbol: "calendar ",
@@ -60,11 +62,13 @@ var config = {
             header:   "Congés",
             position: "top_left",
             config:   {
+                wrapEvents: true,
+                maxTitleLength: 20,
                 timeFormat:             'absolute',
-                dateFormat:             'D MMMM',
-                fullDayEventDateFormat: 'D MMMM',
+                dateFormat:             'D MMM',
+                fullDayEventDateFormat: 'D MMM',
                 urgency:                0,
-                fade:                   0,
+                fade:                   0.1,
                 calendars:              [
                     {
                         symbol: "calendar ",
@@ -75,59 +79,89 @@ var config = {
         },
         {
             module:   "calendar",
-            header:   "Jours",
+            header:   "Jours notable",
             position: "top_left",
             config:   {
+                wrapEvents: true,
+                maxTitleLength: 20,
                 timeFormat: 'absolute',
-                dateFormat: 'D MMMM',
+                dateFormat: 'D MMM',
                 urgency:    0,
-                fade:       0,
+                fade:       0.1,
                 calendars:  [
                     {
-                        maximumEntries: 5,
+                        maximumEntries: 3,
                         symbol:         "calendar-check-o ",
                         url:            "webcal://calendar.google.com/calendar/ical/fr.french%23holiday%40group.v.calendar.google.com/public/basic.ics"
                     }
                 ]
             }
         },
-        // {
-        //     module:   "compliments",
-        //     position: "lower_third"
-        // },
-        // {
-        //     module:   "currentweather",
-        //     position: "top_right",
-        //     config:   {
-        //         location:   "New York",
-        //         locationID: "",  //ID from http://www.openweathermap.org/help/city_list.txt
-        //         appid:      "YOUR_OPENWEATHER_API_KEY"
-        //     }
-        // },
-        // {
-        //     module:   "weatherforecast",
-        //     position: "top_right",
-        //     header:   "Weather Forecast",
-        //     config:   {
-        //         location:   "New York",
-        //         locationID: "5128581",  //ID from http://www.openweathermap.org/help/city_list.txt
-        //         appid:      "YOUR_OPENWEATHER_API_KEY"
-        //     }
-        // },
-        // {
-        //     module:   "newsfeed",
-        //     position: "bottom_bar",
-        //     config:   {
-        //         feeds:           [
-        //             {
-        //                 title: "New York Times",
-        //                 url:   "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"
-        //             }
-        //         ],
-        //         showSourceTitle: true,
-        //         showPublishDate: true
-        //     }
-        // },
+        {
+            module:   "compliments",
+            position: "bottom",
+            config: {
+                compliments: {
+                    "anytime" : [
+                        "Hey there sexy !"
+                    ],
+                    "morning" : [
+                        "Good morning, sunshine !",
+                        "Who needs coffee when you have your smile?",
+                        "Go get 'em, Tiger!"
+                    ],
+                    "afternoon" : [
+                        "Hitting your stride!",
+                        "You are making a difference!",
+                        "You're more fun than bubble wrap!"
+                    ],
+                    "evening" : [
+                        "You made someone smile today, I know it.",
+                        "You are making a difference.",
+                        "The day was better for your efforts."
+                    ]
+                }
+            }
+        },
+        {
+            module:   "currentweather",
+            position: "top_right",
+            config:   {
+                location:   "Aix-en-Provence,France",
+                locationID: "3038354",  //ID from http://www.openweathermap.org/help/city_list.txt
+                appid:      "c43f52280386b2c3e0b7d77133c60bda"
+            }
+        },
+        {
+            module:   "weatherforecast",
+            position: "top_right",
+            header:   "Weather Forecast",
+            config:   {
+                location:   "Aix-en-Provence,France",
+                locationID: "3038354",  //ID from http://www.openweathermap.org/help/city_list.txt
+                appid:      "c43f52280386b2c3e0b7d77133c60bda"
+            }
+        },
+        {
+            module: "MMM-Cocktails",
+            position: "top_right", // Editable footprint - Fits anywhere.
+            config: {
+                maxWidth: "280px",     // See provided .css file for full customization options
+                header: "",
+            }
+        },
+        {
+            module: "newsfeed",
+            position: "bottom", // Editable footprint - Fits anywhere.
+            config: {
+                feeds: [
+                    {
+                        title: "Le Saviez-Vous ?",
+                        url: "http://feeds.feedburner.com/lesaviezvous",
+                    },
+                ]
+            }
+        },
     ]
 
 };

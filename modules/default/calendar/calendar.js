@@ -193,7 +193,6 @@ Module.register("calendar", {
             var oneHour     = oneMinute * 60;
             var oneDay      = oneHour * 24;
 
-            console.log(event)
             if (event.fullDayEvent) {
 
                 if (event.today) {
