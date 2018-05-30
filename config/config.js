@@ -143,14 +143,6 @@ var config = {
             }
         },
         {
-            module: "MMM-Cocktails",
-            position: "top_right", // Editable footprint - Fits anywhere.
-            config: {
-                maxWidth: "280px",     // See provided .css file for full customization options
-                header: "",
-            }
-        },
-        {
             module: "newsfeed",
             position: "bottom", // Editable footprint - Fits anywhere.
             config: {
