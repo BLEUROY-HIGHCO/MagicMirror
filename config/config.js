@@ -48,7 +48,7 @@ var config = {
                 dateFormat:             'D MMM',
                 fullDayEventDateFormat: 'D MMM',
                 urgency:                0,
-                fade:                   0.1,
+                fade:                   0,
                 calendars:              [
                     {
                         symbol: "calendar ",
@@ -68,7 +68,7 @@ var config = {
                 dateFormat:             'D MMM',
                 fullDayEventDateFormat: 'D MMM',
                 urgency:                0,
-                fade:                   0.1,
+                fade:                   0,
                 calendars:              [
                     {
                         symbol: "calendar ",
@@ -87,7 +87,7 @@ var config = {
                 timeFormat: 'absolute',
                 dateFormat: 'D MMM',
                 urgency:    0,
-                fade:       0.1,
+                fade:       0,
                 calendars:  [
                     {
                         maximumEntries: 3,
@@ -137,6 +137,7 @@ var config = {
             position: "top_right",
             header:   "Weather Forecast",
             config:   {
+                fade: 0,
                 location:   "Aix-en-Provence,France",
                 locationID: "3038354",  //ID from http://www.openweathermap.org/help/city_list.txt
                 appid:      "c43f52280386b2c3e0b7d77133c60bda"
